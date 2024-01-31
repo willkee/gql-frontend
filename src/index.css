@@ -1,3 +1,7 @@
+:root {
+	--primary: #3498db;
+}
+
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
@@ -12,4 +16,29 @@ body {
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
+}
+
+.fx {
+	display: flex;
+	width: 300px;
+	margin-top: 10px;
+}
+
+.fx :first-child {
+	margin-right: 15px;
+}
+
+.fx :last-child {
+	width: 100%;
+	height: 20px;
+}
+
+[type="text"],
+[type="number"] {
+	color: var(--primary);
+}
+
+.fx::before {
+	content: "Text: BBBB";
+	margin-right: 10px;
 }

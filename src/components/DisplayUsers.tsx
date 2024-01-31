@@ -6,13 +6,20 @@ export default function DisplayUsers() {
 
 	if (loading) return <p>Loading...</p>;
 	if (error) return <p>Error :{error.message}</p>;
-
+	console.log(data.users);
 	return data.users.map((user: any) => (
 		<div key={user.id}>
 			<ul>
 				<li>{user.name}</li>
-				<li>{user.age}</li>
-				<li>{user.title}</li>
+				<ul>
+					<li>Age: {user.age}</li>
+					<li>Position: {user.title}</li>
+					<li>Company:</li>
+					<ul>
+						<li>Name: {user.company.name}</li>
+						<li>CEO: {user.company.ceo}</li>
+					</ul>
+				</ul>
 			</ul>
 		</div>
 	));
